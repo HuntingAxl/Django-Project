@@ -9,7 +9,8 @@ import praw
 
 def index(request):
 	reddit()
-	return HttpResponse("Hello, world. You're at the polls index.")
+	context={}
+	return render(request, 'reddit_api/index.html', context)
 
 
 def reddit():
